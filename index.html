@@ -17,9 +17,9 @@
       <p class="text-xl text-gray-800">Giá bán:</p>
       <p class="text-2xl font-bold text-red-600">Liên hệ để biết giá</p>
     </div>
-    <a href="mailto:quangtamvu@gmail.com" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
+    <button onclick="showContact()" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
       Liên hệ ngay
-    </a>
+    </button>
     <p class="text-sm text-gray-500 mt-6">Hoặc gọi: <a href="tel:+84984838382">+84 984 83 83 82</a></p>
   </div>
   <div class="mt-10 max-w-xl w-full text-center">
@@ -36,10 +36,27 @@
     </ul>
   </div>
 
+  <!-- Popup -->
+  <div id="popup" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-xl shadow-lg max-w-sm text-center">
+      <h3 class="text-xl font-semibold mb-4">Thông tin liên hệ</h3>
+      <p class="mb-2"><a href="mailto:quangtamvu@gmail.com?subject=Lien%20he%20mua%20ten%20mien" class="text-blue-600 hover:underline">📧 quangtamvu@gmail.com</a></p>
+      <p class="mb-4"><a href="tel:+84984838382" class="text-blue-600 hover:underline">📞 0984 83 83 82</a></p>
+      <button onclick="hideContact()" class="mt-4 bg-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300">Đóng</button>
+    </div>
+  </div>
+
   <script>
-    // Tự động lấy domain từ URL
     const domain = window.location.hostname;
     document.getElementById("domainName").innerText = domain;
+
+    function showContact() {
+      document.getElementById("popup").classList.remove("hidden");
+    }
+
+    function hideContact() {
+      document.getElementById("popup").classList.add("hidden");
+    }
   </script>
 </body>
 </html>

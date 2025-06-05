@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rao bán tên miền</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white rounded-2xl shadow-xl p-8 max-w-xl w-full text-center">
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">Tên miền đẹp đang rao bán</h1>
+    <p id="domainName" class="text-2xl font-semibold text-blue-600 mb-4">[domain]</p>
+    <p class="text-gray-700 mb-6">
+      Đây là một tên miền ngắn gọn, dễ nhớ, chuyên nghiệp – lý tưởng cho các doanh nghiệp lớn, ngân hàng, công ty bảo hiểm hoặc dịch vụ tài chính. Sở hữu tên miền này sẽ giúp nâng tầm thương hiệu và tạo lợi thế cạnh tranh trên thị trường số.
+    </p>
+    <div class="mb-6">
+      <p class="text-xl text-gray-800">Giá bán:</p>
+      <p class="text-2xl font-bold text-red-600">Liên hệ để biết giá</p>
+    </div>
+    <a href="mailto:quangtamvu@gmail.com?subject=Lien he mua ten mien" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
+      Liên hệ ngay
+    </a>
+    <p class="text-sm text-gray-500 mt-6">Hoặc gọi: 0984 83 83 82</p>
+  </div>
+
+  <script>
+    // Tự động lấy domain từ URL
+    const domain = window.location.hostname;
+    document.getElementById("domainName").innerText = domain;
+  </script>
+</body>
+</html>
